@@ -1,0 +1,12 @@
+{
+  "name": "Clojure",
+  "dockerFile": "Dockerfile",
+  "customizations": {
+    "vscode": {
+      "extensions": ["betterthantomorrow.calva"]
+    }
+  },
+  "containerEnv": {
+    "OP_SERVICE_ACCOUNT_TOKEN": "${localEnv:OP_SERVICE_ACCOUNT_TOKEN}"
+  }
+}

@@ -1,0 +1,58 @@
+Первая лекция по Кложуре
+- IDE 
+    - Clojure: Java + Clojure
+    - Calva
+    - deps.edn
+    - Clojure LSP
+    - Connect to REPL(clojure-jack-in)
+    - REPL - load file / evaluate top expression
+    - (do (….)) as quick REPL experience
+- Syntax
+    - prefix notation: func(a, b) → (func a b)
+    - infix → prefix: 2 + 3 → (+ 2 3)
+    - lists: homoiconic, code as data
+    - IFn - first element of list
+        - lambda functions
+        - maps
+        - keywords
+- Define function
+    - named:defn
+    - lambda:(fn[])
+- Data types
+    - list
+        - first / cons
+        - rest / tail
+        - code == list
+    - vector
+        - first / conj
+        - rest
+    - map
+        - assoc
+        - get
+- Recursion
+    - recursion vs iteration
+        - base case
+        - step(step should be SMALLER than now)
+    - nth example
+	    - check original Clojure implementation
+	    - clojure.lang.RT
+    - map example
+    - filter example
+    - zipmap example
+- Homework
+    - List processing(LISP - LIst Processing Language)
+        - reduce
+        - filter
+        - concat
+        - nth
+        - max/min
+        - count
+        - take
+    - Maps
+        - merge
+        - group-by
+        - keys
+        - vals
+        - select-keys
+- Q&A
+    - What's not clear before doing homework?

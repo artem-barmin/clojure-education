@@ -1,0 +1,6 @@
+.clj-kondo/
+.calva/
+.cpcache/
+.lsp/
+.portal/
+.DS_Store

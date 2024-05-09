@@ -1,0 +1,71 @@
+Вторая лекция по кложуре
+
+- Разбор домашек
+    - https://github.com/anti79/clojure-hw/blob/26eaade533c8386ffe04737d168e0ec7fd9a0338/src/homework1.clj#L32 - лишние bindings в loop
+    - https://github.com/anti79/clojure-hw/blob/26eaade533c8386ffe04737d168e0ec7fd9a0338/src/homework1.clj#L57 - форматирование, сложная логика - можно индекс с нулем сравнивать
+    - https://github.com/anti79/clojure-hw/blob/26eaade533c8386ffe04737d168e0ec7fd9a0338/src/homework1.clj#L125 - зачем reverse?
+    - https://github.com/pircoderx/clojuration/blob/0644c63b4d0b2c5fec468deaf3c0df1c4c2acd50/hw1/homework1.clj#L82 - concat со списком-синглтоном это bad practice
+    - https://github.com/pircoderx/clojuration/blob/0644c63b4d0b2c5fec468deaf3c0df1c4c2acd50/hw1/homework1.clj#L120 - классная реализация с high order predicate
+    - https://github.com/pircoderx/clojuration/blob/0644c63b4d0b2c5fec468deaf3c0df1c4c2acd50/hw1/homework1.clj#L148 - (reduce inc 0 lst)
+        - inc
+    - https://github.com/pircoderx/clojuration/blob/0644c63b4d0b2c5fec468deaf3c0df1c4c2acd50/hw1/homework1.clj#L224 - rewrite with let 
+        - https://github.com/Sergey1Getman/wamble_1/blob/92616eac2d0978b0b18c028e5bbcd4e656be4f3b/src/wamble_1/wamble_1.clj#L154 - хороший пример
+    - https://gist.github.com/Dzhmilka/99d4b49ac536f492ad1ac53013616a0a#file-homework1-clj-L108 - rewrite with let with destruction
+- Доработки по первой лекции
+    - code style
+        - kebab-case
+        - closing parens
+	- cljfmt
+        - format on save
+    - Показать ast для js и для лиспа- продолжение s exp темы
+        - https://esprima.org/demo/parse.html#
+    - Reduce как функция выражающая принцип рекурсии
+        - Реализовать map и filter через reduce 
+    - Tail call optimization - другой формат рекурсивных вызовов
+        - loop/recur
+        - recur without loop
+        - letfn + recur
+    - Immutable data structures
+        - concept of immutability
+    - let - local bidingins
+- Symbol datatype
+    - symbol as first class citizen
+    - interned - guaranteed to point to the same memory address
+        - funny story about Java Integers 126==126, 130!=130
+    - monkey patching
+    - alter-var-root
+- Functions as first class citizens
+    - lambda vs defn - see implementation of defn
+        - just assignment to symbol
+    - passing functons as arguments - map, filter
+    - function composition - comp, juxt, partial
+    - implement “comp”
+    - Pure vs impure functions 
+- Closures
+    - lexical scope vs dynamic scope
+        - let + return function that capture local vars and arguments
+        - closure = function + context
+    - dynamic binding - elisp
+- Laziness
+    - call-by-value vs call-by-name: https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_name
+    - map + do
+    - map + doall
+- Macroses basics 
+    - Hygiene / namespace pollution 
+        - backquote
+        - tilda
+        - tilda + @ - splice
+        - symbol auto-gen
+    - Temp vars and why they important - example of double execution
+    - Macroexpand
+    - Macros: check=
+- Threading macro 
+    - Семантика 
+    - Аналоги в других языках: lodash chain
+    - Реализовать самостоятельно 
+- Homework
+    - https://4clojure.oxal.org/#/problem/158
+    - https://4clojure.oxal.org/#/problem/58
+    - https://4clojure.oxal.org/#/problem/69
+    - https://4clojure.oxal.org/#/problem/59
+    - Advanced: https://gist.github.com/volodymyrpavliuk/0f79e53883ffe0e9d828eda93ebd4630

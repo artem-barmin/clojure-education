@@ -5,9 +5,12 @@
     - deps.edn
     - Clojure LSP
     - Connect to REPL(clojure-jack-in)
+        - "Jack in" from Neuromancer
     - REPL - load file / evaluate top expression
     - (do (….)) as quick REPL experience
 - Syntax
+    - s expression 
+        - paredit
     - prefix notation: func(a, b) → (func a b)
     - infix → prefix: 2 + 3 → (+ 2 3)
     - lists: homoiconic, code as data
@@ -18,6 +21,8 @@
 - Define function
     - named:defn
     - lambda:(fn[])
+    - passing function as argument
+    - more in lecture 2: functions as first class citizens
 - Data types
     - list
         - first / cons

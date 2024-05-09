@@ -1,14 +1,19 @@
 (ns main)
 
-(+ 1 2)
+(def global-scope 1)
 
-(eval (cons '+ (cons 1 (cons 2 nil))))
+(defn test-closure [external-scope]
+  (let [test1 1020]
+    (fn nested []
+      (let [local-scope 3]
+        (prn global-scope test1 external-scope local-scope)))))
 
-(rest (list 1 2 3))
+((test-closure 2))
+((test-closure 3))
+((test-closure 4))
+((test-closure 5))
 
-(do
-  (defn my-nth [lst n]
-    (if (= n 0)
-      (first lst)
-      (my-nth (rest lst) (- n 1))))
-  (my-nth (list 10 20 30) 1))
+
+(let [nested-fn (test-closure 3)]
+  (with-redefs [global-scope 10]
+    (nested-fn)))

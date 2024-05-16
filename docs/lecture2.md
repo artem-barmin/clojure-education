@@ -46,22 +46,40 @@
         - let + return function that capture local vars and arguments
         - closure = function + context
     - dynamic binding - elisp
+- Destructing
+    - places: let, fun arguments
+    - types:
+        - vector/list
+        - map
+            - specific names for keys
+            - default values for keys
+        - nested map
 - Laziness
     - call-by-value vs call-by-name: https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_name
     - map + do
     - map + doall
 - Macroses basics 
+    - Quote
+        - code as-is
     - Hygiene / namespace pollution 
         - backquote
+            - vs quote
         - tilda
         - tilda + @ - splice
         - symbol auto-gen
     - Temp vars and why they important - example of double execution
+    - Basic macroses
+        - comment
+        - and
+        - or
+        - when
+        - when-let
     - Macroexpand
     - Macros: check=
 - Threading macro 
     - Семантика 
     - Аналоги в других языках: lodash chain
+        - https://stackoverflow.com/questions/35590543/how-do-you-chain-functions-using-lodash
     - Реализовать самостоятельно 
 - Homework
     - https://4clojure.oxal.org/#/problem/158

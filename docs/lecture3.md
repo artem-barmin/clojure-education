@@ -1,0 +1,54 @@
+- Code style
+    - Linter: https://github.com/clj-commons/kibit
+    - Cheatsheet: https://clojure.org/api/cheatsheet
+    - Code smells: https://bsless.github.io/code-smells/
+- More data structures
+    - keywords
+        - interning
+        - IFn
+    - sets
+        - intersection
+        - IFn
+- Serialization
+    - EDN vs JSON
+    - Transit
+- State
+    - atom
+        - watcher
+        - swap! and reset!
+    - ref
+        - STM
+            - ACID
+            - serializable isolation level
+            - https://kagi.com/proxy/clojurestmtransactions.png
+        - automatic retry
+        - alter vs commute
+    - dynamic/binding
+        - thread-local variables
+- Java interop
+    - call method on Java object
+- Libraries
+    - clojure namespace definition
+    - use vs require
+    - deps.edn + Maven
+        - https://github.com/razum2um/awesome-clojure - awesome lists
+    - “Lisp’s curse”
+        - How to choose libraries
+            - latest activity in github
+            - issues - are they processing?
+            - discussions in Clojurians
+- ClojureScript - LOOM
+    - differences from Clojure
+    - building 
+        - shadow-cljs
+    - REPL
+    - switching repl’s
+- Specific tasks
+    - Pre-req
+        - Install local database Postgres
+    - HTTP server - ring
+    - Routing - compojure
+    - Database connection - jdbc
+    - SQL query generation - honeysql
+    - testing - clojure.test
+    - ClojureScript

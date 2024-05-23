@@ -1,4 +1,4 @@
-(ns main
+(ns lecture-macroses
   (:use clojure.walk))
 
 (let [mp {:test 1 :nested {:other 10} :nested-vector [11 21 31]}
@@ -9,7 +9,7 @@
   [other test nested-other first-nested second-nested])
 
 (defmacro my-when [cond & body]
-  `(if ~cond
+  `(if (not ~cond)
      (do
        ~@body)))
 
@@ -18,6 +18,16 @@
 
 (defmacro my-when-test [cond & body]
   (prn cond body))
+
+(defn my-test-fn-with-macro []
+  (my-when true (prn "A")))
+
+(my-test-fn-with-macro)
+
+(defn macro-simulate []
+  (list '+ 1 2))
+
+(eval (macro-simulate))
 
 
 
